@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import Combine
 
 @main
 struct ReduxApplicationApp: App {
     var body: some Scene {
+        
+        let store = ApplicationStore<ApplicationState>(reducer: applicationReducer, state: ApplicationState(counter: CounterState(value: 0)), middlewares: [logMiddleWare(), incrementMiddleWare()])
+        
         WindowGroup {
-            ContentView()
+            CounterView()
+                .environmentObject(store)
         }
     }
 }
