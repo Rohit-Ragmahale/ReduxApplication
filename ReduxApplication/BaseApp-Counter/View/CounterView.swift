@@ -40,20 +40,20 @@ struct CounterView: View {
                 .padding()
             Button("Increment") {
                 props.onIncrement()
-            }
+            }.buttonStyle(CustomButtonStyle())
             Button("Async Increment") {
                 props.onAsyncIncrement()
-            }
+            }.buttonStyle(CustomButtonStyle())
             Button("Decrement") {
                 props.onDecrement()
-            }
+            }.buttonStyle(CustomButtonStyle())
             Button("Async Decrement") {
                 props.onAsyncDecrement()
-            }
+            }.buttonStyle(CustomButtonStyle())
             .padding([.bottom], 50)
             Button("Add Task") {
                 isPresented = true
-            }
+            }.buttonStyle(CustomButtonStyle())
             
             List(store.state.tasksList.tasks, id: \.self) { item in
                 Text("\(item.title)")

@@ -27,16 +27,19 @@ struct AddTaskView: View {
         
         VStack {
             TextField("Enter Task", text: $newTask)
-                .padding()
+                .modifier(CustomThemeModifier())
                 .padding([.top], 50)
             Button("Add Task") {
                 store.dispatch(action: addNewTask(name: newTask))
                 newTask = ""
-            }.padding([.bottom], 50)
+            }
+            .modifier(CustomThemeModifier())
+            .padding([.bottom], 50)
             
-            Text("TaskList")
+            Text("TaskList").modifier(CustomThemeModifier())
             List(props.tasks, id: \.self) {item in
                 Text("\(item.title)")
+                    .modifier(CustomThemeModifier())
             }
             
             Spacer()

@@ -26,6 +26,7 @@
 		436DDCD02BA4DA3B00BA41E0 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCCF2BA4DA3B00BA41E0 /* AddTaskView.swift */; };
 		436DDCD22BA4DE0300BA41E0 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCD12BA4DE0300BA41E0 /* Actions.swift */; };
 		436DDCD52BA4E0B400BA41E0 /* ApplicationMiddleWare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCD42BA4E0B400BA41E0 /* ApplicationMiddleWare.swift */; };
+		43708ECB2BA7EEDB005C5B80 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43708ECA2BA7EEDB005C5B80 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		436DDCCF2BA4DA3B00BA41E0 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		436DDCD12BA4DE0300BA41E0 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		436DDCD42BA4E0B400BA41E0 /* ApplicationMiddleWare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationMiddleWare.swift; sourceTree = "<group>"; };
+		43708ECA2BA7EEDB005C5B80 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 		436DDCCE2BA4DA1F00BA41E0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				43708EC92BA7EECC005C5B80 /* Utility */,
 				436DDC8F2BA4C25D00BA41E0 /* CounterView.swift */,
 				436DDCCF2BA4DA3B00BA41E0 /* AddTaskView.swift */,
 			);
@@ -217,6 +220,14 @@
 				436DDCD42BA4E0B400BA41E0 /* ApplicationMiddleWare.swift */,
 			);
 			path = Middleware;
+			sourceTree = "<group>";
+		};
+		43708EC92BA7EECC005C5B80 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				43708ECA2BA7EEDB005C5B80 /* Theme.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +372,7 @@
 				436DDCC62BA4D13F00BA41E0 /* ReduxStateProtocol.swift in Sources */,
 				436DDC902BA4C25D00BA41E0 /* CounterView.swift in Sources */,
 				436DDCC42BA4D0C100BA41E0 /* CounterState.swift in Sources */,
+				43708ECB2BA7EEDB005C5B80 /* Theme.swift in Sources */,
 				436DDCC92BA4D62A00BA41E0 /* Task.swift in Sources */,
 				436DDC8E2BA4C25D00BA41E0 /* ReduxApplicationApp.swift in Sources */,
 			);
