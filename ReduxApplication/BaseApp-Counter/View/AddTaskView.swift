@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct AddTaskView: View {
-    @EnvironmentObject var store: ApplicationStore<ApplicationState>
+    @EnvironmentObject var store: AppStore
     @State var newTask: String = ""
     
-    struct Props {
+    private struct Props {
         var tasks: [Task]
         var addTask: (String) -> Void
     }
     
     private func map(state: TaskState) -> Props {
         return Props(tasks: state.tasks) { newTask in
-            store.dispatch(action: addNewTask(name: newTask))
+            store.dispatch(action: .addNewTask(name: newTask))
         }
     }
     
@@ -30,7 +30,7 @@ struct AddTaskView: View {
                 .modifier(CustomThemeModifier())
                 .padding([.top], 50)
             Button("Add Task") {
-                store.dispatch(action: addNewTask(name: newTask))
+                props.addTask(newTask)
                 newTask = ""
             }
             .modifier(CustomThemeModifier())
@@ -48,7 +48,10 @@ struct AddTaskView: View {
 }
 
 #Preview {
-    AddTaskView().environmentObject(ApplicationStore(reducer: applicationReducer, state: ApplicationState(), middlewares: [{ satte, action, dispatcher in
-        print("satte")
-    }]))
+    let state = ApplicationState(counter: CounterState(value: 0))
+    let reducer = AppReducer()
+    let sideEffect = IncrementSideffect()
+    let store = AppStore(reducer: reducer, state: state, sideEffect: sideEffect)
+    
+    return AddTaskView().environmentObject(store)
 }

@@ -12,8 +12,10 @@ import Combine
 struct ReduxApplicationApp: App {
     var body: some Scene {
         
-        let store = ApplicationStore<ApplicationState>(reducer: applicationReducer, state: ApplicationState(counter: CounterState(value: 0)), middlewares: [logMiddleWare(), incrementMiddleWare()])
-        
+        let state = ApplicationState(counter: CounterState(value: 0))
+        let reducer = AppReducer()
+        let sideEffect = IncrementSideffect()
+        let store = AppStore(reducer: reducer, state: state, sideEffect: sideEffect)
         WindowGroup {
             CounterView()
                 .environmentObject(store)

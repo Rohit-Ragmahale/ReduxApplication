@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct CounterView: View {
-    @EnvironmentObject var store: ApplicationStore<ApplicationState>
+    @EnvironmentObject var store: AppStore
     @State var isPresented: Bool = false
-    struct Props {
+
+    private struct Props {
         var counter: Int
         var isCalculating: Bool
         var onIncrement: () -> Void
@@ -22,13 +23,13 @@ struct CounterView: View {
     private func map(state: ApplicationState) -> Props {
         return Props(counter: state.counter.value,
                      isCalculating: state.counter.calculating) {
-            store.dispatch(action: IncrementAction())
+            store.dispatch(action: .IncrementAction(val: 1))
         } onDecrement: {
-            store.dispatch(action: DecrementAction())
+            store.dispatch(action: .DecrementAction(val: 1))
         } onAsyncIncrement: {
-            store.dispatch(action: AsyncIncrementAction())
+            store.dispatch(action: .AsyncIncrementAction)
         } onAsyncDecrement: {
-            store.dispatch(action: AsyncDecrementAction())
+            store.dispatch(action: .AsyncDecrementAction)
         }
     }
     
@@ -67,5 +68,10 @@ struct CounterView: View {
 }
 
 #Preview {
-    CounterView().environmentObject(ApplicationStore(reducer: applicationReducer, state: ApplicationState(counter: CounterState(value: 0)), middlewares: [logMiddleWare(), incrementMiddleWare()]))
+    let state = ApplicationState(counter: CounterState(value: 0))
+    let reducer = AppReducer()
+    let sideEffect = IncrementSideffect()
+    let store = AppStore(reducer: reducer, state: state, sideEffect: sideEffect)
+
+    return CounterView().environmentObject(store)
 }
