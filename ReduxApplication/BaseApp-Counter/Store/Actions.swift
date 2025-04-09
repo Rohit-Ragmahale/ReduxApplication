@@ -5,23 +5,21 @@
 //  Created by Rohit Ragmahale on 16/03/24.
 //
 
-import Foundation
-
-protocol Action {}
-
-// COUNTER
-protocol CounterAction: Action {}
-struct IncrementAction: CounterAction {
-    var val: Int = 1
+// MARK: APPLICATION ACTION
+enum Actions {
+    case counterAction(CounterActions)
+    case taskAction(TaskActions)
 }
-struct DecrementAction: CounterAction {
-    var val: Int = 1
-}
-struct AsyncIncrementAction: CounterAction {}
-struct AsyncDecrementAction: CounterAction {}
 
-// TASK
-protocol TaskAction: Action {}
-struct addNewTask: TaskAction {
-    var name: String
+// MARK: COUNTER FEATURE ACTION
+enum CounterActions {
+    case increment(Int)
+    case decrement(Int)
+    case asyncIncrementAction
+    case asyncDecrementAction
+}
+
+// MARK: TASK FEATURE ACTION
+enum TaskActions {
+    case addNew(String)
 }

@@ -9,24 +9,21 @@ import Foundation
 import Combine
 
 class ApplicationStore<T: ReduxState>: ObservableObject {
-    var reducer: ApplicationReducer<T>
+    private var reducer: ApplicationReducer<T>
+    private var sideEffects: ApplicationSideEffect
     @Published var state: T
-    var middlewareList: [Middleware<T>]
 
-    init(reducer: @escaping ApplicationReducer<T>, state: T, middlewares: [Middleware<T>]) {
+    init(reducer: @escaping ApplicationReducer<T>, sideEffects: ApplicationSideEffect, state: T) {
         self.reducer = reducer
         self.state = state
-        self.middlewareList = middlewares
+        self.sideEffects = sideEffects
     }
-    
-    func dispatch(action: Action) {
-        // State must be updated on main thread
-        DispatchQueue.main.async {
-            self.state = self.reducer(self.state, action)
-        }
 
-        for middleware in middlewareList {
-            middleware(self.state, action, dispatch)
+    func dispatch(action: Actions) {
+        // State must be updated on main thread
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            state = reducer(state, action, sideEffects, dispatch)
         }
     }
 }
