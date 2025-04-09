@@ -5,14 +5,14 @@
 //  Created by Rohit Ragmahale on 16/03/24.
 //
 
-typealias ApplicationReducer<State: ReduxState> = (_ state: State, _ action: Actions,_ sideEffect: ApplicationSideEffect, _ dispatcher: @escaping (Actions) -> Void) -> State
+typealias ApplicationReducer<State: ReduxState> = (_ state: State, _ action: ApplicationActions,_ sideEffect: ApplicationSideEffect, _ dispatcher: @escaping (ApplicationActions) -> Void) -> State
 
 // MARK: APPLICATION REDUCER
 func applicationReducer(
     state: ApplicationState,
-    action: Actions,
+    action: ApplicationActions,
     sideEffect: ApplicationSideEffect,
-    dispatcher: @escaping (Actions) -> Void
+    dispatcher: @escaping (ApplicationActions) -> Void
 ) -> ApplicationState {
     var newState = state
 
@@ -33,7 +33,7 @@ func counterReducer(
     state: CounterState,
     action: CounterActions,
     sideEffect: ApplicationSideEffect,
-    dispatcher: @escaping (Actions) -> Void
+    dispatcher: @escaping (ApplicationActions) -> Void
 ) -> CounterState {
     var newState = state
     switch action {

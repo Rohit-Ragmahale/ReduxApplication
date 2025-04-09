@@ -19,7 +19,7 @@
 		436DDCC62BA4D13F00BA41E0 /* ReduxState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCC52BA4D13F00BA41E0 /* ReduxState.swift */; };
 		436DDCC92BA4D62A00BA41E0 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCC82BA4D62A00BA41E0 /* Task.swift */; };
 		436DDCD02BA4DA3B00BA41E0 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCCF2BA4DA3B00BA41E0 /* AddTaskView.swift */; };
-		436DDCD22BA4DE0300BA41E0 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCD12BA4DE0300BA41E0 /* Actions.swift */; };
+		436DDCD22BA4DE0300BA41E0 /* ApplicationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCD12BA4DE0300BA41E0 /* ApplicationActions.swift */; };
 		436DDCD52BA4E0B400BA41E0 /* ApplicationSideEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCD42BA4E0B400BA41E0 /* ApplicationSideEffect.swift */; };
 		439A86002DA6A66200D72286 /* CounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439A85FF2DA6A66200D72286 /* CounterViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -57,7 +57,7 @@
 		436DDCC52BA4D13F00BA41E0 /* ReduxState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxState.swift; sourceTree = "<group>"; };
 		436DDCC82BA4D62A00BA41E0 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		436DDCCF2BA4DA3B00BA41E0 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
-		436DDCD12BA4DE0300BA41E0 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		436DDCD12BA4DE0300BA41E0 /* ApplicationActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationActions.swift; sourceTree = "<group>"; };
 		436DDCD42BA4E0B400BA41E0 /* ApplicationSideEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationSideEffect.swift; sourceTree = "<group>"; };
 		439A85FF2DA6A66200D72286 /* CounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,7 +158,7 @@
 			children = (
 				436DDCB92BA4C33F00BA41E0 /* ApplicationStore.swift */,
 				436DDCC52BA4D13F00BA41E0 /* ReduxState.swift */,
-				436DDCD12BA4DE0300BA41E0 /* Actions.swift */,
+				436DDCD12BA4DE0300BA41E0 /* ApplicationActions.swift */,
 				436DDCBE2BA4D03400BA41E0 /* ApplicationReducer.swift */,
 				436DDCD42BA4E0B400BA41E0 /* ApplicationSideEffect.swift */,
 			);
@@ -329,7 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				436DDCD22BA4DE0300BA41E0 /* Actions.swift in Sources */,
+				436DDCD22BA4DE0300BA41E0 /* ApplicationActions.swift in Sources */,
 				436DDCBF2BA4D03400BA41E0 /* ApplicationReducer.swift in Sources */,
 				436DDCBA2BA4C33F00BA41E0 /* ApplicationStore.swift in Sources */,
 				436DDCD02BA4DA3B00BA41E0 /* AddTaskView.swift in Sources */,

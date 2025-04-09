@@ -6,7 +6,7 @@
 //
 
 // MARK: APPLICATION ACTION
-enum Actions {
+enum ApplicationActions {
     case counterAction(CounterActions)
     case taskAction(TaskActions)
 }

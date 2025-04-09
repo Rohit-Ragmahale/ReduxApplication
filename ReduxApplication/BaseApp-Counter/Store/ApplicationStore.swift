@@ -19,7 +19,7 @@ class ApplicationStore<T: ReduxState>: ObservableObject {
         self.sideEffects = sideEffects
     }
 
-    func dispatch(action: Actions) {
+    func dispatch(action: ApplicationActions) {
         // State must be updated on main thread
         DispatchQueue.main.async { [weak self] in
             guard let self else { return }

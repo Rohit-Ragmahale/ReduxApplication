@@ -7,14 +7,14 @@
 
 import Foundation
 
-typealias Dispatcher = (Actions) -> Void
+typealias Dispatcher = (ApplicationActions) -> Void
 // typealias SideEffect<State: ReduxState> = (State, Actions, @escaping Dispatcher) -> Void
 
 // This class will be initialised with APIService to get data from API
 class ApplicationSideEffect {
 
     // Logging service can be used for Adobe analytics
-    func logger(action: Actions, dispatcher: @escaping Dispatcher) {
+    func logger(action: ApplicationActions, dispatcher: @escaping Dispatcher) {
         print("[LOG] \(action.self)")
     }
 
@@ -26,7 +26,7 @@ class ApplicationSideEffect {
             // Create domain model
             // Pass to action
             let demoDomainModel: Int = 5
-            dispatcher(Actions.counterAction(.increment(demoDomainModel)))
+            dispatcher(.counterAction(.increment(demoDomainModel)))
         })
     }
 
@@ -34,7 +34,7 @@ class ApplicationSideEffect {
     func decrementService(dispatcher: @escaping Dispatcher) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
             let demoDomainModel: Int = 10
-            dispatcher(Actions.counterAction(.decrement(demoDomainModel)))
+            dispatcher(.counterAction(.decrement(demoDomainModel)))
         })
     }
 }
