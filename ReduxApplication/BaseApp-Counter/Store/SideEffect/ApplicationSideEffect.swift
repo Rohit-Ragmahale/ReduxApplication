@@ -21,14 +21,20 @@ class ApplicationSideEffect {
     // Increment service
     func incrementService(dispatcher: @escaping Dispatcher) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-            dispatcher(Actions.counterAction(.increment(5)))
+            // Do async api call
+            // Parse result
+            // Create domain model
+            // Pass to action
+            let demoDomainModel: Int = 5
+            dispatcher(Actions.counterAction(.increment(demoDomainModel)))
         })
     }
 
     // Decrement service
     func decrementService(dispatcher: @escaping Dispatcher) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-            dispatcher(Actions.counterAction(.decrement(5)))
+            let demoDomainModel: Int = 10
+            dispatcher(Actions.counterAction(.decrement(demoDomainModel)))
         })
     }
 }
