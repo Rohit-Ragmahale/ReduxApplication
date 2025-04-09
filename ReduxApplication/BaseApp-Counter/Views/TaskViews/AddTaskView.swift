@@ -13,7 +13,7 @@ struct AddTaskView: View {
     
     // Kept this another approch to map state data to view
     struct Props {
-        var tasks: [Task]
+        var tasks: [TodoTask]
         var addTask: (String) -> Void
     }
 

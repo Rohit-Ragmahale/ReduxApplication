@@ -5,6 +5,6 @@
 //  Created by Rohit Ragmahale on 16/03/24.
 //
 
-struct Task: Hashable {
+struct TodoTask: Hashable {
     var title: String
 }

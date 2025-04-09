@@ -4,6 +4,7 @@
 //
 //  Created by Rohit Ragmahale on 16/03/24.
 //
+import Foundation
 
 typealias ApplicationReducer<State: ReduxState> = (_ state: State, _ action: ApplicationActions,_ sideEffect: ApplicationSideEffect, _ dispatcher: @escaping (ApplicationActions) -> Void) -> State
 
@@ -48,13 +49,17 @@ func counterReducer(
     case .asyncIncrementAction:
         // asyncIncrementAction business logic
         newState.calculating = true
-        // call side effect which will execute asynchronously
-        sideEffect.incrementService(dispatcher: dispatcher)
+        Task {
+            // call side effect which will execute asynchronously
+            sideEffect.incrementService(dispatcher: dispatcher)
+        }
     case .asyncDecrementAction:
         // asyncDecrementAction business logic
         newState.calculating = true
-        // call side effect which will execute asynchronously
-        sideEffect.decrementService(dispatcher: dispatcher)
+        Task {
+            // call side effect which will execute asynchronously
+            sideEffect.decrementService(dispatcher: dispatcher)
+        }
     }
     return newState
 }
@@ -69,7 +74,7 @@ func taskReducer(
     switch action {
     case .addNew(let name):
         // business logic
-        let newTask = Task(title: name)
+        let newTask = TodoTask(title: name)
         newState.tasks.append(newTask)
     }
 

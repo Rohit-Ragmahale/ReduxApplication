@@ -24,5 +24,5 @@ struct CounterState: ReduxState {
 
 // MARK: TASK FEATURE STATE
 struct TaskState: ReduxState {
-    var tasks: [Task] = []
+    var tasks: [TodoTask] = []
 }
