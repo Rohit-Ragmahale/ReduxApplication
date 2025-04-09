@@ -11,14 +11,15 @@ struct AddTaskView: View {
     @EnvironmentObject var store: ApplicationStore<ApplicationState>
     @State var newTask: String = ""
     
+    // Kept this another approch to map state data to view
     struct Props {
         var tasks: [Task]
         var addTask: (String) -> Void
     }
-    
+
     private func map(state: TaskState) -> Props {
         return Props(tasks: state.tasks) { newTask in
-            store.dispatch(action: addNewTask(name: newTask))
+            store.dispatch(action: .taskAction(.addNew(newTask)))
         }
     }
     
@@ -30,7 +31,7 @@ struct AddTaskView: View {
                 .padding()
                 .padding([.top], 50)
             Button("Add Task") {
-                store.dispatch(action: addNewTask(name: newTask))
+                store.dispatch(action: .taskAction(.addNew(newTask)))
                 newTask = ""
             }.padding([.bottom], 50)
             
@@ -38,14 +39,17 @@ struct AddTaskView: View {
             List(props.tasks, id: \.self) {item in
                 Text("\(item.title)")
             }
-            
             Spacer()
         }
     }
 }
 
 #Preview {
-    AddTaskView().environmentObject(ApplicationStore(reducer: applicationReducer, state: ApplicationState(), middlewares: [{ satte, action, dispatcher in
-        print("satte")
-    }]))
+    AddTaskView().environmentObject(
+        ApplicationStore(
+            reducer: applicationReducer,
+            sideEffects: ApplicationSideEffect(),
+            state: ApplicationState()
+        )
+    )
 }

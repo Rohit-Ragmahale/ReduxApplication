@@ -15,17 +15,13 @@
 		436DDCA92BA4C26000BA41E0 /* ReduxApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCA82BA4C26000BA41E0 /* ReduxApplicationUITests.swift */; };
 		436DDCAB2BA4C26000BA41E0 /* ReduxApplicationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCAA2BA4C26000BA41E0 /* ReduxApplicationUITestsLaunchTests.swift */; };
 		436DDCBA2BA4C33F00BA41E0 /* ApplicationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCB92BA4C33F00BA41E0 /* ApplicationStore.swift */; };
-		436DDCBD2BA4CF9300BA41E0 /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCBC2BA4CF9300BA41E0 /* CounterReducer.swift */; };
 		436DDCBF2BA4D03400BA41E0 /* ApplicationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCBE2BA4D03400BA41E0 /* ApplicationReducer.swift */; };
-		436DDCC22BA4D07C00BA41E0 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCC12BA4D07C00BA41E0 /* ApplicationState.swift */; };
-		436DDCC42BA4D0C100BA41E0 /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCC32BA4D0C100BA41E0 /* CounterState.swift */; };
-		436DDCC62BA4D13F00BA41E0 /* ReduxStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCC52BA4D13F00BA41E0 /* ReduxStateProtocol.swift */; };
+		436DDCC62BA4D13F00BA41E0 /* ReduxState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCC52BA4D13F00BA41E0 /* ReduxState.swift */; };
 		436DDCC92BA4D62A00BA41E0 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCC82BA4D62A00BA41E0 /* Task.swift */; };
-		436DDCCB2BA4D65400BA41E0 /* TaskState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCCA2BA4D65400BA41E0 /* TaskState.swift */; };
-		436DDCCD2BA4D6C000BA41E0 /* TaskReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCCC2BA4D6C000BA41E0 /* TaskReducer.swift */; };
 		436DDCD02BA4DA3B00BA41E0 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCCF2BA4DA3B00BA41E0 /* AddTaskView.swift */; };
 		436DDCD22BA4DE0300BA41E0 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCD12BA4DE0300BA41E0 /* Actions.swift */; };
-		436DDCD52BA4E0B400BA41E0 /* ApplicationMiddleWare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCD42BA4E0B400BA41E0 /* ApplicationMiddleWare.swift */; };
+		436DDCD52BA4E0B400BA41E0 /* ApplicationSideEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436DDCD42BA4E0B400BA41E0 /* ApplicationSideEffect.swift */; };
+		439A86002DA6A66200D72286 /* CounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439A85FF2DA6A66200D72286 /* CounterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,17 +53,13 @@
 		436DDCA82BA4C26000BA41E0 /* ReduxApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxApplicationUITests.swift; sourceTree = "<group>"; };
 		436DDCAA2BA4C26000BA41E0 /* ReduxApplicationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxApplicationUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		436DDCB92BA4C33F00BA41E0 /* ApplicationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStore.swift; sourceTree = "<group>"; };
-		436DDCBC2BA4CF9300BA41E0 /* CounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
 		436DDCBE2BA4D03400BA41E0 /* ApplicationReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationReducer.swift; sourceTree = "<group>"; };
-		436DDCC12BA4D07C00BA41E0 /* ApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
-		436DDCC32BA4D0C100BA41E0 /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
-		436DDCC52BA4D13F00BA41E0 /* ReduxStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxStateProtocol.swift; sourceTree = "<group>"; };
+		436DDCC52BA4D13F00BA41E0 /* ReduxState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxState.swift; sourceTree = "<group>"; };
 		436DDCC82BA4D62A00BA41E0 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		436DDCCA2BA4D65400BA41E0 /* TaskState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskState.swift; sourceTree = "<group>"; };
-		436DDCCC2BA4D6C000BA41E0 /* TaskReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskReducer.swift; sourceTree = "<group>"; };
 		436DDCCF2BA4DA3B00BA41E0 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		436DDCD12BA4DE0300BA41E0 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
-		436DDCD42BA4E0B400BA41E0 /* ApplicationMiddleWare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationMiddleWare.swift; sourceTree = "<group>"; };
+		436DDCD42BA4E0B400BA41E0 /* ApplicationSideEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationSideEffect.swift; sourceTree = "<group>"; };
+		439A85FF2DA6A66200D72286 /* CounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +160,7 @@
 				436DDCD12BA4DE0300BA41E0 /* Actions.swift */,
 				436DDCC02BA4D06F00BA41E0 /* State */,
 				436DDCBB2BA4CF7E00BA41E0 /* Reducer */,
-				436DDCD32BA4E09200BA41E0 /* Middleware */,
+				436DDCD32BA4E09200BA41E0 /* SideEffect */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -177,8 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				436DDCBE2BA4D03400BA41E0 /* ApplicationReducer.swift */,
-				436DDCBC2BA4CF9300BA41E0 /* CounterReducer.swift */,
-				436DDCCC2BA4D6C000BA41E0 /* TaskReducer.swift */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
@@ -186,10 +176,7 @@
 		436DDCC02BA4D06F00BA41E0 /* State */ = {
 			isa = PBXGroup;
 			children = (
-				436DDCC52BA4D13F00BA41E0 /* ReduxStateProtocol.swift */,
-				436DDCC12BA4D07C00BA41E0 /* ApplicationState.swift */,
-				436DDCC32BA4D0C100BA41E0 /* CounterState.swift */,
-				436DDCCA2BA4D65400BA41E0 /* TaskState.swift */,
+				436DDCC52BA4D13F00BA41E0 /* ReduxState.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -205,18 +192,35 @@
 		436DDCCE2BA4DA1F00BA41E0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				436DDC8F2BA4C25D00BA41E0 /* CounterView.swift */,
-				436DDCCF2BA4DA3B00BA41E0 /* AddTaskView.swift */,
+				439A86012DA6B93700D72286 /* Task */,
+				439A85FE2DA6A64D00D72286 /* CounterView */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		436DDCD32BA4E09200BA41E0 /* Middleware */ = {
+		436DDCD32BA4E09200BA41E0 /* SideEffect */ = {
 			isa = PBXGroup;
 			children = (
-				436DDCD42BA4E0B400BA41E0 /* ApplicationMiddleWare.swift */,
+				436DDCD42BA4E0B400BA41E0 /* ApplicationSideEffect.swift */,
 			);
-			path = Middleware;
+			path = SideEffect;
+			sourceTree = "<group>";
+		};
+		439A85FE2DA6A64D00D72286 /* CounterView */ = {
+			isa = PBXGroup;
+			children = (
+				436DDC8F2BA4C25D00BA41E0 /* CounterView.swift */,
+				439A85FF2DA6A66200D72286 /* CounterViewModel.swift */,
+			);
+			path = CounterView;
+			sourceTree = "<group>";
+		};
+		439A86012DA6B93700D72286 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				436DDCCF2BA4DA3B00BA41E0 /* AddTaskView.swift */,
+			);
+			path = Task;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,18 +353,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				436DDCC22BA4D07C00BA41E0 /* ApplicationState.swift in Sources */,
 				436DDCD22BA4DE0300BA41E0 /* Actions.swift in Sources */,
 				436DDCBF2BA4D03400BA41E0 /* ApplicationReducer.swift in Sources */,
 				436DDCBA2BA4C33F00BA41E0 /* ApplicationStore.swift in Sources */,
 				436DDCD02BA4DA3B00BA41E0 /* AddTaskView.swift in Sources */,
-				436DDCD52BA4E0B400BA41E0 /* ApplicationMiddleWare.swift in Sources */,
-				436DDCBD2BA4CF9300BA41E0 /* CounterReducer.swift in Sources */,
-				436DDCCB2BA4D65400BA41E0 /* TaskState.swift in Sources */,
-				436DDCCD2BA4D6C000BA41E0 /* TaskReducer.swift in Sources */,
-				436DDCC62BA4D13F00BA41E0 /* ReduxStateProtocol.swift in Sources */,
+				439A86002DA6A66200D72286 /* CounterViewModel.swift in Sources */,
+				436DDCD52BA4E0B400BA41E0 /* ApplicationSideEffect.swift in Sources */,
+				436DDCC62BA4D13F00BA41E0 /* ReduxState.swift in Sources */,
 				436DDC902BA4C25D00BA41E0 /* CounterView.swift in Sources */,
-				436DDCC42BA4D0C100BA41E0 /* CounterState.swift in Sources */,
 				436DDCC92BA4D62A00BA41E0 /* Task.swift in Sources */,
 				436DDC8E2BA4C25D00BA41E0 /* ReduxApplicationApp.swift in Sources */,
 			);
