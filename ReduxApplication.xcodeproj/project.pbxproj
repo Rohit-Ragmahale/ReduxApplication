@@ -147,7 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				436DDCC72BA4D62000BA41E0 /* Model */,
-				436DDCCE2BA4DA1F00BA41E0 /* View */,
+				436DDCCE2BA4DA1F00BA41E0 /* Views */,
 				436DDCB82BA4C32600BA41E0 /* Store */,
 			);
 			path = "BaseApp-Counter";
@@ -157,28 +157,12 @@
 			isa = PBXGroup;
 			children = (
 				436DDCB92BA4C33F00BA41E0 /* ApplicationStore.swift */,
+				436DDCC52BA4D13F00BA41E0 /* ReduxState.swift */,
 				436DDCD12BA4DE0300BA41E0 /* Actions.swift */,
-				436DDCC02BA4D06F00BA41E0 /* State */,
-				436DDCBB2BA4CF7E00BA41E0 /* Reducer */,
-				436DDCD32BA4E09200BA41E0 /* SideEffect */,
+				436DDCBE2BA4D03400BA41E0 /* ApplicationReducer.swift */,
+				436DDCD42BA4E0B400BA41E0 /* ApplicationSideEffect.swift */,
 			);
 			path = Store;
-			sourceTree = "<group>";
-		};
-		436DDCBB2BA4CF7E00BA41E0 /* Reducer */ = {
-			isa = PBXGroup;
-			children = (
-				436DDCBE2BA4D03400BA41E0 /* ApplicationReducer.swift */,
-			);
-			path = Reducer;
-			sourceTree = "<group>";
-		};
-		436DDCC02BA4D06F00BA41E0 /* State */ = {
-			isa = PBXGroup;
-			children = (
-				436DDCC52BA4D13F00BA41E0 /* ReduxState.swift */,
-			);
-			path = State;
 			sourceTree = "<group>";
 		};
 		436DDCC72BA4D62000BA41E0 /* Model */ = {
@@ -189,21 +173,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		436DDCCE2BA4DA1F00BA41E0 /* View */ = {
+		436DDCCE2BA4DA1F00BA41E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				439A86012DA6B93700D72286 /* Task */,
+				439A86012DA6B93700D72286 /* TaskViews */,
 				439A85FE2DA6A64D00D72286 /* CounterView */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		436DDCD32BA4E09200BA41E0 /* SideEffect */ = {
-			isa = PBXGroup;
-			children = (
-				436DDCD42BA4E0B400BA41E0 /* ApplicationSideEffect.swift */,
-			);
-			path = SideEffect;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		439A85FE2DA6A64D00D72286 /* CounterView */ = {
@@ -215,12 +191,12 @@
 			path = CounterView;
 			sourceTree = "<group>";
 		};
-		439A86012DA6B93700D72286 /* Task */ = {
+		439A86012DA6B93700D72286 /* TaskViews */ = {
 			isa = PBXGroup;
 			children = (
 				436DDCCF2BA4DA3B00BA41E0 /* AddTaskView.swift */,
 			);
-			path = Task;
+			path = TaskViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
